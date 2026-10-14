@@ -5,10 +5,10 @@ import "./globals.css";
 const lora = Lora({ variable: "--font-lora", subsets: ["latin"], weight: ["500", "600", "700"] });
 const inter = Inter({ variable: "--font-inter", subsets: ["latin"] });
 
-const __jsonld = {"@context":"https://schema.org","@type":"FurnitureStore","name":"Woodora","description":"Furnitur kayu solid yang dibuat sesuai ukuran","url":"https://landing-woodora.vercel.app"};
+const __jsonld = {"@context":"https://schema.org","@type":"FurnitureStore","name":"Woodora","description":"Furnitur kayu solid yang dibuat sesuai ukuran","url":"https://landing-woodora.pintuweb.id"};
 
 export const metadata = {
-  metadataBase: new URL("https://landing-woodora.vercel.app"),
+  metadataBase: new URL("https://landing-woodora.pintuweb.id"),
   title: { default: "Woodora — Furnitur Kayu Solid Sesuai Ukuran", template: "%s — Woodora" },
   description: "Woodora membuat meja, kursi, dan rak dari jati, mahoni, dan sungkai sesuai ukuran ruang Anda — dengan gambar kerja bertanda ukuran sebelum kayu dipotong. Ukur ke rumah gratis.",
   applicationName: "Woodora",
@@ -16,11 +16,11 @@ export const metadata = {
   authors: [{ name: "Woodora" }],
   creator: "Woodora",
   publisher: "Woodora",
-  alternates: { canonical: "https://landing-woodora.vercel.app" },
+  alternates: { canonical: "https://landing-woodora.pintuweb.id" },
   openGraph: {
     type: "website",
     locale: "id_ID",
-    url: "https://landing-woodora.vercel.app",
+    url: "https://landing-woodora.pintuweb.id",
     siteName: "Woodora",
     title: "Woodora — Furnitur Kayu Solid Sesuai Ukuran",
     description: "Woodora membuat meja, kursi, dan rak dari jati, mahoni, dan sungkai sesuai ukuran ruang Anda — dengan gambar kerja bertanda ukuran sebelum kayu dipotong. Ukur ke rumah gratis.",

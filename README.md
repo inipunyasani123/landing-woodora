@@ -2,7 +2,7 @@
 
 Woodora membuat meja, kursi, dan rak dari jati, mahoni, dan sungkai sesuai ukuran ruang Anda — dengan gambar kerja bertanda ukuran sebelum kayu dipotong. Ukur ke rumah gratis.
 
-**Demo live:** https://landing-woodora.vercel.app
+**Demo live:** https://landing-woodora.pintuweb.id
 
 ![Tangkapan layar Woodora](public/og.jpg)
 
