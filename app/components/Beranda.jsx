@@ -1,6 +1,6 @@
-import Image from 'next/image';
 import Link from 'next/link';
 import { FAQ as DAFTAR, KATALOG, KAYU, PROSES, kayuBySlug, rp } from '@/lib/kayu';
+import Foto from './Foto';
 import { ContohKayu, GambarKerja } from './Kayu';
 
 export function Hero() {
@@ -23,7 +23,7 @@ export function Hero() {
           <p className="spec-caps mt-2">{KAYU.map((k) => k.nama).join(' · ')}</p>
         </div>
         <figure>
-          <Image src="/images/foto/kursi-meja.webp" alt="Kursi kayu bersandaran lengkung di samping meja bundar kayu dengan secangkir kopi" width={960} height={1200} priority sizes="(max-width: 1024px) 100vw, 500px" className="h-auto w-full" />
+          <Foto nama="kursi-meja" lebar={960} tinggi={1200} utama sizes="(max-width: 1024px) 100vw, 500px" alt="Kursi kayu bersandaran lengkung di samping meja bundar kayu dengan secangkir kopi" className="h-auto w-full" />
           <figcaption className="spec-caps mt-3">Foto suasana (CC0) — Ryan Riggins</figcaption>
         </figure>
       </div>
@@ -70,8 +70,8 @@ export function Proses() {
     <section id="proses" className="scroll-mt-16 bg-linen px-6 py-16 md:py-28">
       <div className="mx-auto grid max-w-6xl gap-12 lg:grid-cols-[minmax(0,0.9fr)_minmax(0,1.1fr)]">
         <div className="space-y-4">
-          <Image src="/images/foto/ukur.webp" alt="Tangan tukang kayu mengukur bulatan kayu dengan jangka sorong" width={960} height={640} sizes="(max-width: 1024px) 100vw, 500px" className="h-auto w-full" />
-          <Image src="/images/foto/amplas.webp" alt="Tukang kayu mengamplas papan kayu di bengkel penuh serbuk" width={1024} height={683} sizes="(max-width: 1024px) 100vw, 500px" className="hidden h-auto w-full sm:block" />
+          <Foto nama="ukur" lebar={960} tinggi={640} sizes="(max-width: 1024px) 100vw, 500px" alt="Tangan tukang kayu mengukur bulatan kayu dengan jangka sorong" className="h-auto w-full" />
+          <Foto nama="amplas" lebar={1024} tinggi={683} sizes="(max-width: 1024px) 100vw, 500px" alt="Tukang kayu mengamplas papan kayu di bengkel penuh serbuk" className="hidden h-auto w-full sm:block" />
         </div>
         <div>
           <p className="spec-caps text-brass-w">Proses</p>

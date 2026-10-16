@@ -1,4 +1,4 @@
-import Image from 'next/image';
+import Foto from '../components/Foto';
 import Link from 'next/link';
 import { KATALOG, KAYU, SITE } from '@/lib/kayu';
 import { ContohKayu } from '../components/Kayu';
@@ -30,7 +30,7 @@ export default function JenisKayu() {
             <p className="mt-5 max-w-xl text-lg leading-relaxed">Kayu yang paling mahal belum tentu paling cocok. Meja makan butuh kestabilan; kursi anak butuh ringan; rak terbuka butuh corak yang enak dilihat.</p>
           </div>
           <figure>
-            <Image src="/images/foto/permukaan.webp" alt="Permukaan meja kayu dengan serat memanjang yang terlihat jelas" width={960} height={1200} sizes="(max-width: 1024px) 100vw, 560px" className="aspect-[4/3] w-full object-cover" />
+            <Foto nama="permukaan" lebar={960} tinggi={1200} sizes="(max-width: 1024px) 100vw, 560px" alt="Permukaan meja kayu dengan serat memanjang yang terlihat jelas" className="aspect-[4/3] w-full object-cover" />
             <figcaption className="spec-caps mt-3">Foto: STIL (CC0)</figcaption>
           </figure>
         </div>
