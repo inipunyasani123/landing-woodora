@@ -11,9 +11,12 @@ export async function generateMetadata({ params }) {
   const { slug } = await params;
   const k = katalogBySlug(slug);
   if (!k) return {};
+  // Deskripsi <=155 karakter: daftar kayu hanya disebut bila masih muat.
+  const ukuran = `${k.p} × ${k.l} × ${k.t} cm`;
+  const lengkap = `${k.nama}: ${ukuran}, kayu ${k.kayu.map((s) => kayuBySlug(s).nama.toLowerCase()).join(' atau ')}, mulai ${rp(k.mulai)}. ${k.ringkas}`;
   return {
     title: k.nama,
-    description: `${k.nama}: ${k.p} × ${k.l} × ${k.t} cm, kayu ${k.kayu.map((s) => kayuBySlug(s).nama.toLowerCase()).join(' atau ')}, mulai ${rp(k.mulai)}. ${k.ringkas}`,
+    description: lengkap.length <= 155 ? lengkap : `${k.nama}: ${ukuran}, mulai ${rp(k.mulai)}. ${k.ringkas}`,
     alternates: { canonical: `${SITE}/katalog/${k.slug}` },
   };
 }

@@ -34,7 +34,7 @@ export default function FormUkur() {
   const input = 'w-full border border-walnut/25 bg-linen px-4 py-3 text-walnut focus:border-walnut focus:outline-none';
 
   return (
-    <section id="ukur" className="scroll-mt-16 bg-linen px-6 py-20 md:py-28">
+    <section id="ukur" className="scroll-mt-16 bg-linen px-6 py-16 md:py-28">
       <div className="mx-auto max-w-6xl">
         <p className="spec-caps text-brass-w">Jadwalkan ukur</p>
         <h2 className="mt-4 max-w-2xl text-[2.2rem] leading-[1.08] font-semibold text-walnut md:text-5xl">Coret dulu ukurannya, kami datang memastikan</h2>

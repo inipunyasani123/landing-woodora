@@ -23,7 +23,7 @@ export function Hero() {
           <p className="spec-caps mt-2">{KAYU.map((k) => k.nama).join(' · ')}</p>
         </div>
         <figure>
-          <Image src="/images/foto/kursi-meja.webp" alt="Kursi kayu bersandaran lengkung di samping meja bundar kayu dengan secangkir kopi" width={960} height={1200} priority className="h-auto w-full" />
+          <Image src="/images/foto/kursi-meja.webp" alt="Kursi kayu bersandaran lengkung di samping meja bundar kayu dengan secangkir kopi" width={960} height={1200} priority sizes="(max-width: 1024px) 100vw, 500px" className="h-auto w-full" />
           <figcaption className="spec-caps mt-3">Foto suasana (CC0) — Ryan Riggins</figcaption>
         </figure>
       </div>
@@ -33,18 +33,19 @@ export function Hero() {
 
 export function Katalog() {
   return (
-    <section className="bg-linen-2 px-6 py-20 md:py-28">
+    <section className="bg-linen-2 px-6 py-16 md:py-28">
       <div className="mx-auto max-w-6xl">
-        <div className="mb-12 flex flex-col justify-between gap-6 sm:flex-row sm:items-end">
+        <div className="mb-10 flex flex-col justify-between gap-5 sm:mb-12 sm:flex-row sm:items-end sm:gap-6">
           <div>
             <p className="spec-caps text-brass-w">Katalog</p>
             <h2 className="mt-4 text-[2.2rem] leading-[1.08] font-semibold text-walnut md:text-5xl">Ukuran di sini hanya titik awal</h2>
           </div>
-          <Link href="/katalog" className="spec-caps shrink-0 border-b-2 border-walnut pb-1 text-walnut">Semua perabot</Link>
+          <Link href="/katalog" className="spec-caps shrink-0 self-start border-b-2 border-walnut py-1 text-walnut sm:self-auto">Semua perabot</Link>
         </div>
+        {/* Ponsel: tiga perabot pertama saja; sisanya di /katalog. */}
         <ul className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
-          {KATALOG.map((k) => (
-            <li key={k.slug}>
+          {KATALOG.map((k, i) => (
+            <li key={k.slug} className={i >= 3 ? 'hidden md:block' : undefined}>
               <Link href={`/katalog/${k.slug}`} className="flex h-full flex-col border border-walnut/15 bg-linen p-5 transition-colors hover:border-walnut">
                 <GambarKerja item={k} />
                 <span className="spec-caps mt-4 text-brass-w">{k.ruang}</span>
@@ -58,6 +59,7 @@ export function Katalog() {
             </li>
           ))}
         </ul>
+        <Link href="/katalog" className="mt-6 flex min-h-12 items-center justify-center border-2 border-walnut px-6 font-semibold text-walnut hover:bg-walnut hover:text-linen md:hidden">Lihat {KATALOG.length - 3} perabot lainnya</Link>
       </div>
     </section>
   );
@@ -65,11 +67,11 @@ export function Katalog() {
 
 export function Proses() {
   return (
-    <section id="proses" className="scroll-mt-16 bg-linen px-6 py-20 md:py-28">
+    <section id="proses" className="scroll-mt-16 bg-linen px-6 py-16 md:py-28">
       <div className="mx-auto grid max-w-6xl gap-12 lg:grid-cols-[minmax(0,0.9fr)_minmax(0,1.1fr)]">
         <div className="space-y-4">
-          <Image src="/images/foto/ukur.webp" alt="Tangan tukang kayu mengukur bulatan kayu dengan jangka sorong" width={960} height={640} className="h-auto w-full" />
-          <Image src="/images/foto/amplas.webp" alt="Tukang kayu mengamplas papan kayu di bengkel penuh serbuk" width={1024} height={683} className="h-auto w-full" />
+          <Image src="/images/foto/ukur.webp" alt="Tangan tukang kayu mengukur bulatan kayu dengan jangka sorong" width={960} height={640} sizes="(max-width: 1024px) 100vw, 500px" className="h-auto w-full" />
+          <Image src="/images/foto/amplas.webp" alt="Tukang kayu mengamplas papan kayu di bengkel penuh serbuk" width={1024} height={683} sizes="(max-width: 1024px) 100vw, 500px" className="hidden h-auto w-full sm:block" />
         </div>
         <div>
           <p className="spec-caps text-brass-w">Proses</p>
@@ -94,22 +96,22 @@ export function Proses() {
 
 export function KayuTeaser() {
   return (
-    <section className="bg-walnut px-6 py-20 text-linen md:py-28">
+    <section className="bg-walnut px-6 py-16 text-linen md:py-28">
       <div className="mx-auto max-w-6xl">
         <div className="mb-10 flex flex-col justify-between gap-6 sm:flex-row sm:items-end">
           <div>
             <p className="spec-caps text-linen/80">Jenis kayu</p>
             <h2 className="mt-4 text-[2.2rem] leading-[1.08] font-semibold text-linen md:text-5xl">Lima kayu, lima watak</h2>
           </div>
-          <Link href="/jenis-kayu" className="spec-caps shrink-0 border-b-2 border-linen pb-1 text-linen">Panduan lengkap</Link>
+          <Link href="/jenis-kayu" className="spec-caps shrink-0 self-start border-b-2 border-linen py-1 text-linen sm:self-auto">Panduan lengkap</Link>
         </div>
-        <ul className="grid grid-cols-2 gap-4 md:grid-cols-5">
+        <ul className="grid grid-cols-3 gap-3 sm:gap-4 md:grid-cols-5">
           {KAYU.map((k) => (
             <li key={k.slug}>
               <Link href={`/jenis-kayu#${k.slug}`} className="block">
-                <ContohKayu kayu={k} className="aspect-[3/4] w-full" />
-                <span className="mt-3 block font-[family-name:var(--font-lora)] text-xl font-semibold">{k.nama}</span>
-                <span className="text-sm text-linen/80 italic">{k.latin}</span>
+                <ContohKayu kayu={k} className="aspect-square w-full sm:aspect-[3/4]" />
+                <span className="mt-2 block font-[family-name:var(--font-lora)] text-base font-semibold sm:mt-3 sm:text-xl">{k.nama}</span>
+                <span className="block text-xs text-linen/80 italic sm:text-sm">{k.latin}</span>
               </Link>
             </li>
           ))}
@@ -121,7 +123,7 @@ export function KayuTeaser() {
 
 export function FAQ() {
   return (
-    <section className="bg-linen-2 px-6 py-20 md:py-28">
+    <section className="bg-linen-2 px-6 py-16 md:py-28">
       <div className="mx-auto grid max-w-6xl gap-12 lg:grid-cols-[minmax(0,0.8fr)_minmax(0,1.2fr)]">
         <div>
           <p className="spec-caps text-brass-w">Pertanyaan</p>

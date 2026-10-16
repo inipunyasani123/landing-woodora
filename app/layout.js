@@ -10,7 +10,7 @@ const __jsonld = {"@context":"https://schema.org","@type":"FurnitureStore","name
 export const metadata = {
   metadataBase: new URL("https://landing-woodora.pintuweb.id"),
   title: { default: "Woodora — Furnitur Kayu Solid Sesuai Ukuran", template: "%s — Woodora" },
-  description: "Woodora membuat meja, kursi, dan rak dari jati, mahoni, dan sungkai sesuai ukuran ruang Anda — dengan gambar kerja bertanda ukuran sebelum kayu dipotong. Ukur ke rumah gratis.",
+  description: "Woodora membuat meja, kursi, dan rak kayu solid sesuai ukuran ruang Anda, dengan gambar kerja bertanda ukuran sebelum kayu dipotong. Ukur ke rumah gratis.",
   applicationName: "Woodora",
   keywords: ["furnitur kayu solid", "mebel custom", "meja makan jati", "rak buku mahoni", "jenis kayu furnitur"],
   authors: [{ name: "Woodora" }],
@@ -23,13 +23,13 @@ export const metadata = {
     url: "https://landing-woodora.pintuweb.id",
     siteName: "Woodora",
     title: "Woodora — Furnitur Kayu Solid Sesuai Ukuran",
-    description: "Woodora membuat meja, kursi, dan rak dari jati, mahoni, dan sungkai sesuai ukuran ruang Anda — dengan gambar kerja bertanda ukuran sebelum kayu dipotong. Ukur ke rumah gratis.",
+    description: "Woodora membuat meja, kursi, dan rak kayu solid sesuai ukuran ruang Anda, dengan gambar kerja bertanda ukuran sebelum kayu dipotong. Ukur ke rumah gratis.",
     images: [{ url: "/og.jpg", width: 1200, height: 630, alt: "Woodora — Furnitur Kayu Solid Sesuai Ukuran" }],
   },
   twitter: {
     card: "summary_large_image",
     title: "Woodora — Furnitur Kayu Solid Sesuai Ukuran",
-    description: "Woodora membuat meja, kursi, dan rak dari jati, mahoni, dan sungkai sesuai ukuran ruang Anda — dengan gambar kerja bertanda ukuran sebelum kayu dipotong. Ukur ke rumah gratis.",
+    description: "Woodora membuat meja, kursi, dan rak kayu solid sesuai ukuran ruang Anda, dengan gambar kerja bertanda ukuran sebelum kayu dipotong. Ukur ke rumah gratis.",
     images: ["/og.jpg"],
   },
   robots: {
