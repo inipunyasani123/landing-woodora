@@ -39,7 +39,7 @@ export default async function DetailKatalog({ params }) {
     <main className="bg-linen px-6 pt-28 pb-24">
       <div className="mx-auto max-w-6xl">
         <nav aria-label="Remah roti" className="spec-caps flex flex-wrap gap-2">
-          <Link href="/katalog" className="text-brass-w hover:text-walnut">Katalog</Link>
+          <Link href="/katalog" className="inline-flex min-h-11 items-center text-brass-w hover:text-walnut">Katalog</Link>
           <span aria-hidden="true">/</span>
           <span aria-current="page">{k.nama}</span>
         </nav>
@@ -81,7 +81,7 @@ export default async function DetailKatalog({ params }) {
                   <div className="p-5">
                     <h3 className="text-xl font-semibold text-walnut">{w.nama} <span className="text-base font-normal italic">{w.latin}</span></h3>
                     <p className="mt-2 text-sm leading-relaxed">{w.catatan}</p>
-                    <Link href={`/jenis-kayu#${w.slug}`} className="spec-caps mt-4 inline-block border-b border-walnut text-walnut">Watak {w.nama.toLowerCase()}</Link>
+                    <Link href={`/jenis-kayu#${w.slug}`} className="spec-caps mt-2 inline-flex min-h-11 items-center border-b border-walnut text-walnut">Watak {w.nama.toLowerCase()}</Link>
                   </div>
                 </li>
               );

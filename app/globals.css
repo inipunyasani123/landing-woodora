@@ -21,7 +21,7 @@
 }
 
 .measure-line { background-image: linear-gradient(to right, currentColor 0 1px, transparent 1px 8px); background-size: 8px 1px; background-repeat: repeat-x; height: 1px; opacity: 0.5; }
-.spec-caps { font-size: 0.6875rem; letter-spacing: 0.2em; text-transform: uppercase; font-weight: 600; }
+.spec-caps { font-size: 0.75rem; letter-spacing: 0.18em; text-transform: uppercase; font-weight: 600; }
 
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after {

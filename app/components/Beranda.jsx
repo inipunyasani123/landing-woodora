@@ -40,7 +40,7 @@ export function Katalog() {
             <p className="spec-caps text-brass-w">Katalog</p>
             <h2 className="mt-4 text-[2.2rem] leading-[1.08] font-semibold text-walnut md:text-5xl">Ukuran di sini hanya titik awal</h2>
           </div>
-          <Link href="/katalog" className="spec-caps shrink-0 self-start border-b-2 border-walnut py-1 text-walnut sm:self-auto">Semua perabot</Link>
+          <Link href="/katalog" className="spec-caps inline-flex min-h-11 shrink-0 items-center self-start border-b-2 border-walnut text-walnut sm:self-auto">Semua perabot</Link>
         </div>
         {/* Ponsel: tiga perabot pertama saja; sisanya di /katalog. */}
         <ul className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
@@ -104,7 +104,7 @@ export function KayuTeaser() {
             <p className="spec-caps text-linen/80">Jenis kayu</p>
             <h2 className="mt-4 text-[2.2rem] leading-[1.08] font-semibold text-linen md:text-5xl">Lima kayu, lima watak</h2>
           </div>
-          <Link href="/jenis-kayu" className="spec-caps shrink-0 self-start border-b-2 border-linen py-1 text-linen sm:self-auto">Panduan lengkap</Link>
+          <Link href="/jenis-kayu" className="spec-caps inline-flex min-h-11 shrink-0 items-center self-start border-b-2 border-linen text-linen sm:self-auto">Panduan lengkap</Link>
         </div>
         <ul className="grid grid-cols-3 gap-3 sm:gap-4 md:grid-cols-5">
           {KAYU.map((k) => (

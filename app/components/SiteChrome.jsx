@@ -34,15 +34,15 @@ export function SiteFooter() {
         <nav aria-label="Katalog">
           <p className="spec-caps mb-4 text-linen/80">Katalog</p>
           <ul className="space-y-1 text-sm text-linen/80">
-            {KATALOG.map((k) => <li key={k.slug}><Link href={`/katalog/${k.slug}`} className="inline-block py-1.5 hover:text-linen">{k.nama}</Link></li>)}
+            {KATALOG.map((k) => <li key={k.slug}><Link href={`/katalog/${k.slug}`} className="inline-flex min-h-11 items-center hover:text-linen">{k.nama}</Link></li>)}
           </ul>
         </nav>
         <nav aria-label="Halaman">
           <p className="spec-caps mb-4 text-linen/80">Halaman</p>
           <ul className="space-y-1 text-sm text-linen/80">
-            <li><Link href="/jenis-kayu" className="inline-block py-1.5 hover:text-linen">Panduan jenis kayu</Link></li>
-            <li><Link href="/#proses" className="inline-block py-1.5 hover:text-linen">Proses pembuatan</Link></li>
-            <li><Link href="/#ukur" className="inline-block py-1.5 hover:text-linen">Jadwalkan ukur</Link></li>
+            <li><Link href="/jenis-kayu" className="inline-flex min-h-11 items-center hover:text-linen">Panduan jenis kayu</Link></li>
+            <li><Link href="/#proses" className="inline-flex min-h-11 items-center hover:text-linen">Proses pembuatan</Link></li>
+            <li><Link href="/#ukur" className="inline-flex min-h-11 items-center hover:text-linen">Jadwalkan ukur</Link></li>
           </ul>
         </nav>
       </div>

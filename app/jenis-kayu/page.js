@@ -48,7 +48,7 @@ export default function JenisKayu() {
               {KAYU.map((k) => (
                 <tr key={k.slug} className="border-b border-walnut/15">
                   <th scope="row" className="py-4 pr-4">
-                    <a href={`#${k.slug}`} className="flex items-center gap-3 font-semibold text-walnut">
+                    <a href={`#${k.slug}`} className="flex min-h-11 items-center gap-3 font-semibold text-walnut">
                       <ContohKayu kayu={k} className="h-6 w-10 shrink-0" />{k.nama}
                     </a>
                   </th>
@@ -83,7 +83,7 @@ export default function JenisKayu() {
                   <p className="mt-3 leading-relaxed">
                     <strong className="text-walnut">Di katalog:</strong>{' '}
                     {dipakai.map((x, j) => (
-                      <span key={x.slug}>{j > 0 && ', '}<Link href={`/katalog/${x.slug}`} className="border-b border-walnut/40 text-walnut hover:border-walnut">{x.nama}</Link></span>
+                      <span key={x.slug}>{j > 0 && ', '}<Link href={`/katalog/${x.slug}`} className="inline-block py-2 text-walnut underline decoration-walnut/40 underline-offset-4 hover:decoration-walnut">{x.nama}</Link></span>
                     ))}
                   </p>
                 )}
