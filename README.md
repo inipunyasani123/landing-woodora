@@ -39,7 +39,7 @@ Buka http://localhost:3000. Untuk build produksi: `npm run build` lalu `npm star
 
 ## Kredit foto
 
-Foto suasana berlisensi **CC0 (domain publik)** dari StockSnap dan rawpixel; perabot di foto bukan produk Woodora.
+Foto berlisensi **CC0 / domain publik** dari StockSnap, rawpixel, dan Wikimedia Commons (rincian lengkap di `public/images/SUMBER.md`); perabot di foto bukan produk Woodora.
 
 - `public/images/foto/kursi-meja.webp` — "Wooden Chair" oleh Ryan Riggins ([sumber](https://stocksnap.io/photo/wooden-chair-0DH6S6OU6Q)).
 - `public/images/foto/ukur.webp` — "Calipers Carpenter" oleh James Frid ([sumber](https://stocksnap.io/photo/calipers-carpenter-GWIDWSKJJJ)).

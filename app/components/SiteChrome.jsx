@@ -46,7 +46,7 @@ export function SiteFooter() {
           </ul>
         </nav>
       </div>
-      <p className="spec-caps mx-auto max-w-6xl border-t border-linen/15 py-6 leading-[1.9] text-linen/70">© 2026 Woodora · Ukuran, harga, dan waktu produksi adalah contoh purwarupa desain · Foto: StockSnap & rawpixel (CC0)</p>
+      <p className="spec-caps mx-auto max-w-6xl border-t border-linen/15 py-6 leading-[1.9] text-linen/70">© 2026 Woodora · Ukuran, harga, dan waktu produksi adalah contoh purwarupa desain · Foto: StockSnap, rawpixel & Wikimedia Commons (CC0/domain publik)</p>
     </footer>
   );
 }

@@ -1,6 +1,7 @@
 import Link from 'next/link';
 import { notFound } from 'next/navigation';
 import { KATALOG, SITE, katalogBySlug, kayuBySlug, rp } from '@/lib/kayu';
+import Foto from '../../components/Foto';
 import { ContohKayu, GambarKerja } from '../../components/Kayu';
 
 export function generateStaticParams() {
@@ -48,7 +49,9 @@ export default async function DetailKatalog({ params }) {
             <p className="spec-caps text-brass-w">{k.ruang}</p>
             <h1 className="mt-3 text-[2.6rem] leading-[1.04] font-semibold text-walnut md:text-6xl">{k.nama}</h1>
             <p className="mt-5 max-w-xl text-lg leading-relaxed">{k.ringkas}</p>
-            <figure className="mt-10 border border-walnut/15 bg-linen-2 p-5 sm:p-8">
+            <Foto nama={k.foto[0]} lebar={960} tinggi={960} utama sizes="(max-width: 1024px) 100vw, 620px" alt={`Foto rujukan: ${k.foto[1]}`} className="mt-10 aspect-[4/3] w-full object-cover" />
+            <p className="spec-caps mt-2">Foto rujukan gaya (CC0), bukan hasil bengkel Woodora</p>
+            <figure className="mt-6 border border-walnut/15 bg-linen-2 p-5 sm:p-8">
               <GambarKerja item={k} />
               <figcaption className="spec-caps mt-4">Gambar kerja · skala menyesuaikan · ukuran dalam cm</figcaption>
             </figure>

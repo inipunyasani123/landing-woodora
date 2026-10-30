@@ -47,6 +47,7 @@ export function Katalog() {
           {KATALOG.map((k, i) => (
             <li key={k.slug} className={i >= 3 ? 'hidden md:block' : undefined}>
               <Link href={`/katalog/${k.slug}`} className="flex h-full flex-col border border-walnut/15 bg-linen p-5 transition-colors hover:border-walnut">
+                <Foto nama={k.foto[0]} lebar={960} tinggi={960} sizes="(max-width: 768px) 90vw, 380px" alt={`Foto rujukan: ${k.foto[1]}`} className="mb-4 aspect-[4/3] w-full object-cover" />
                 <GambarKerja item={k} />
                 <span className="spec-caps mt-4 text-brass-w">{k.ruang}</span>
                 <h3 className="mt-1 text-xl font-semibold text-walnut">{k.nama}</h3>

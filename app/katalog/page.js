@@ -1,5 +1,6 @@
 import Link from 'next/link';
 import { KATALOG, SITE, rp } from '@/lib/kayu';
+import Foto from '../components/Foto';
 import { GambarKerja } from '../components/Kayu';
 import { namaKayu } from '../components/Beranda';
 
@@ -29,6 +30,7 @@ export default function Katalog() {
               {KATALOG.filter((k) => k.ruang === r).map((k) => (
                 <li key={k.slug}>
                   <Link href={`/katalog/${k.slug}`} className="flex h-full flex-col border border-walnut/15 bg-linen-2 p-5 transition-colors hover:border-walnut">
+                    <Foto nama={k.foto[0]} lebar={960} tinggi={960} sizes="(max-width: 768px) 90vw, 380px" alt={`Foto rujukan: ${k.foto[1]}`} className="mb-4 aspect-[4/3] w-full object-cover" />
                     <GambarKerja item={k} />
                     <h3 className="mt-4 text-xl font-semibold text-walnut">{k.nama}</h3>
                     <span className="mt-2 text-sm leading-relaxed">{k.ringkas}</span>
